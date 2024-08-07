@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Liste complète des catégories et questions
     const questionsData = [
         {
             category: "A. Communication",
@@ -121,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const questionnaireContainer = document.getElementById('questionnaire-container');
+    const instruction = document.getElementById('instruction');
     let questionCounter = 0; // Start from 0
     const totalQuestions = questionsData.reduce((sum, category) => sum + category.questions.length, 0);
     let answers = new Array(totalQuestions).fill(null);
@@ -130,9 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         categoryData.questions.forEach((questionText, index) => {
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('question');
-            if (questionCounter === 0) {
-                questionDiv.classList.add('active');
-            }
 
             const questionTitle = document.createElement('p');
             questionTitle.textContent = questionText;
@@ -149,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const circle = document.createElement('div');
                 circle.classList.add('circle');
                 circle.dataset.value = i;
-                circle.textContent = i;
                 circle.addEventListener('click', () => {
                     // Remove 'selected' class from all circles
                     Array.from(scaleDiv.getElementsByClassName('circle')).forEach(c => c.classList.remove('selected'));
@@ -189,7 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             questionDiv.appendChild(nextButton);
             questionnaireContainer.appendChild(questionDiv);
-            questionCounter++;
         });
     });
 
@@ -214,7 +209,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.querySelector('.initial-questions').style.display = 'none';
-        document.querySelectorAll('.question')[0].classList.add('active'); // Show the first question
+        instruction.style.display = 'block';
+        document.getElementById('questionnaire-container').style.display = 'block';
+
+        // Show the first question
+        const firstQuestionDiv = questionnaireContainer.querySelectorAll('.question')[0];
+        firstQuestionDiv.classList.add('active');
 
         console.log('Début du questionnaire - première question affichée');
     });
