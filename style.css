@@ -1,148 +1,175 @@
+/* styles.css */
+
+/* Applique la police EB Garamond au corps de la page et configure l'arrière-plan */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('image-background.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond pour tout le texte */
+    background-image: url('image-background.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre toute la page avec l'image */
+    background-position: center; /* Centre l'image de fond */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 20px; /* Ajoute un padding de 20px autour du contenu */
+    display: flex; /* Utilise Flexbox pour le centrage */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    min-height: 100vh; /* Hauteur minimale de la page, prenant tout l'écran */
 }
 
+/* Conteneur principal pour le formulaire */
 .container {
-    max-width: 800px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center; /* Center text inside container */
+    max-width: 800px; /* Largeur maximale du conteneur */
+    width: 100%; /* Utilise toute la largeur disponible */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
+    border-radius: 8px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    padding: 20px; /* Padding interne du conteneur */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
 }
 
+/* Styles pour l'en-tête principal */
 h1 {
-    text-align: center;
-    color: #4A360F;
+    text-align: center; /* Centre le texte de l'en-tête */
+    color: #333; /* Couleur du texte en gris foncé */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Styles pour le texte du paragraphe */
 p {
-    text-align: center;
-    color: #666;
+    text-align: center; /* Centre le texte des paragraphes */
+    color: #666; /* Couleur du texte en gris moyen */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Masque initialement les questions */
 .initial-questions {
-    display: none;
+    display: none; /* Cache le bloc de questions initialement */
 }
 
+/* Affiche les questions lorsqu'elles sont actives */
 .initial-questions.active {
-    display: block;
+    display: block; /* Affiche le bloc de questions */
 }
 
+/* Groupe de champs de formulaire */
 .form-group {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center items horizontally */
-    margin-bottom: 15px; /* Add space between each question */
+    display: flex; /* Utilise Flexbox pour l'alignement */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-bottom: 15px; /* Espace entre chaque question */
 }
 
+/* Styles pour les étiquettes des champs */
 .form-group label {
-    font-weight: bold;
-    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Met le texte en gras */
+    margin-bottom: 5px; /* Espace entre l'étiquette et le champ */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Styles pour les champs de texte et de sélection */
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    max-width: 300px; /* Set a max width for inputs */
-    box-sizing: border-box; /* Ensure padding doesn't increase total width */
-    margin-bottom: 10px; /* Space below each input */
-    text-align: left; /* Align text inside inputs to the left */
+    padding: 8px; /* Padding interne des champs */
+    border: 1px solid #ccc; /* Bordure grise des champs */
+    border-radius: 4px; /* Coins arrondis des champs */
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 300px; /* Largeur maximale des champs */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    margin-bottom: 10px; /* Espace sous chaque champ */
+    text-align: left; /* Aligne le texte à gauche dans les champs */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Bouton pour démarrer le questionnaire */
 #start-questionnaire {
-    display: block;
-    margin: 30px auto;
-    padding: 10px 20px;
-    background-color: #f5f5dc; /* Beige button color */
-    color: #4A360F;
-    border: none;
-    border-radius: 20px; /* Rounded button corners */
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-    text-transform: uppercase; /* Set button text to uppercase */
+    display: block; /* Affiche le bouton comme un bloc */
+    margin: 30px auto; /* Centré horizontalement avec une marge verticale */
+    padding: 10px 20px; /* Padding interne du bouton */
+    background-color: #f5f5dc; /* Couleur de fond beige */
+    color: #333; /* Couleur du texte en gris foncé */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 20px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Affiche le curseur pointeur au survol */
+    font-size: 1em; /* Taille de police standard */
+    transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Style au survol du bouton démarrer */
 #start-questionnaire:hover {
-    background-color: #e5e5d7; /* Slightly darker beige on hover */
+    background-color: #e5e5d7; /* Couleur de fond plus foncée au survol */
 }
 
+/* Styles pour les questions */
 .question {
-    margin-top: 20px;
-    display: none; /* Hide all questions initially */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light gray background for contrast */
-    font-weight: bold; /* Set questions to bold */
-    font-family: 'Times New Roman', serif; /* Changed font family */
-    font-size: 1.2em; /* Increased font size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Space between questions */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover */
-    text-align: center; /* Center the text */
+    margin-top: 20px; /* Espace au-dessus de chaque question */
+    display: none; /* Cache les questions par défaut */
+    border: 1px solid #ddd; /* Bordure grise des questions */
+    border-radius: 8px; /* Coins arrondis des questions */
+    padding: 20px; /* Padding interne des questions */
+    background-color: #f0f0f0; /* Couleur de fond gris clair */
+    font-weight: bold; /* Met le texte des questions en gras */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
+    font-size: 1.2em; /* Augmente la taille de la police */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    margin-bottom: 20px; /* Espace sous chaque question */
+    transition: all 0.3s ease-in-out; /* Transition douce pour les effets de survol */
+    text-align: center; /* Centre le texte des questions */
 }
 
+/* Affiche uniquement les questions actives */
 .question.active {
-    display: block; /* Show only the active question */
-    transform: translateY(0); /* Ensure no unwanted translation */
+    display: block; /* Affiche uniquement les questions actives */
+    transform: translateY(0); /* Assure qu'il n'y a pas de décalage inattendu */
 }
 
+/* Effet de survol pour les questions */
 .question:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px); /* Légère élévation au survol */
 }
 
+/* Échelle pour les cercles de sélection */
 .scale {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px;
-    position: relative;
-    margin: 10px 0; /* Added margin for spacing */
+    display: flex; /* Utilise Flexbox pour l'alignement horizontal */
+    justify-content: space-between; /* Distribue les cercles de manière égale */
+    align-items: center; /* Aligne verticalement au centre */
+    padding: 0 5px; /* Padding interne de l'échelle */
+    position: relative; /* Position relative pour les éléments internes */
+    margin: 10px 0; /* Espace entre l'échelle et les autres éléments */
 }
 
+/* Styles pour les cercles de sélection */
 .circle {
-    width: 30px;
-    height: 30px;
-    background-color: #ddd;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
-    margin: 0 4px; /* Adjust spacing between circles */
+    width: 30px; /* Largeur des cercles */
+    height: 30px; /* Hauteur des cercles */
+    background-color: #ddd; /* Couleur de fond grise par défaut */
+    border-radius: 50%; /* Forme circulaire */
+    cursor: pointer; /* Affiche le curseur pointeur au survol */
+    transition: transform 0.2s, background-color 0.2s; /* Transitions pour les transformations */
+    display: inline-block; /* Affiche les cercles en ligne */
+    text-align: center; /* Centre le texte à l'intérieur des cercles */
+    line-height: 30px; /* Aligne verticalement le texte à l'intérieur */
+    margin: 0 4px; /* Espacement entre les cercles */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Effet de survol pour les cercles */
 .circle:hover {
-    background-color: #bbb;
+    background-color: #bbb; /* Change la couleur de fond au survol */
 }
 
+/* Styles spécifiques pour le cercle à la valeur 0 */
 .circle[data-value="0"] {
-    background-color: #999;
+    background-color: #999; /* Couleur de fond grise spécifique */
 }
 
+/* Échelle de transformation pour les cercles extrêmes */
 .circle[data-value="-10"], .circle[data-value="10"] {
-    transform: scale(1.8);
+    transform: scale(1.8); /* Grossit les cercles */
 }
 
 .circle[data-value="-9"], .circle[data-value="9"] {
-    transform: scale(1.7);
+    transform: scale(1.7); /* Échelle légèrement inférieure */
 }
 
 .circle[data-value="-8"], .circle[data-value="8"] {
@@ -174,51 +201,60 @@ p {
 }
 
 .circle[data-value="-1"], .circle[data-value="1"] {
-    transform: scale(1);
+    transform: scale(1); /* Taille par défaut */
 }
 
+/* Styles pour les cercles sélectionnés */
 .scale .circle.selected {
-    background-color: #f5f5dc; /* Set selected circle to beige */
-    color: #fff;
+    background-color: #f5f5dc; /* Couleur beige pour le cercle sélectionné */
+    color: #fff; /* Texte en blanc */
 }
 
+/* Styles pour les étiquettes de l'échelle */
 .scale span {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 5px;
-    font-size: 1em; /* Make labels slightly bigger for readability */
+    display: block; /* Affiche les étiquettes comme un bloc */
+    width: 100%; /* Largeur complète de l'échelle */
+    text-align: center; /* Centre le texte */
+    font-weight: bold; /* Met le texte en gras */
+    margin-top: 5px; /* Espace au-dessus de l'étiquette */
+    font-size: 1em; /* Taille de police pour les étiquettes */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Style pour l'étiquette "NÉGATIF" */
 .scale span:first-of-type {
-    color: red; /* Negative label color */
-    margin-top: 10px; /* Margin to separate from circles */
+    color: red; /* Couleur rouge pour le texte "NÉGATIF" */
+    margin-top: 10px; /* Espace au-dessus du texte */
 }
 
+/* Style pour l'étiquette "POSITIF" */
 .scale span:last-of-type {
-    color: green; /* Positive label color */
-    margin-top: 10px; /* Margin to separate from circles */
+    color: green; /* Couleur verte pour le texte "POSITIF" */
+    margin-top: 10px; /* Espace au-dessus du texte */
 }
 
+/* Styles pour les boutons de navigation */
 button {
-    display: block;
-    margin: 30px auto;
-    padding: 10px 20px;
-    background-color: #c5ad82; /* Beige button color */
-    color: #4A360F;
-    border: none;
-    border-radius: 20px; /* Rounded button corners */
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-    text-transform: uppercase; /* Set button text to uppercase */
+    display: block; /* Affiche le bouton comme un bloc */
+    margin: 30px auto; /* Centré horizontalement avec une marge verticale */
+    padding: 10px 20px; /* Padding interne du bouton */
+    background-color: #f5f5dc; /* Couleur de fond beige */
+    color: #333; /* Couleur du texte en gris foncé */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 20px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Affiche le curseur pointeur au survol */
+    font-size: 1em; /* Taille de police standard */
+    transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    font-family: 'EB Garamond', serif; /* Utilise la police EB Garamond */
 }
 
+/* Effet de survol pour les boutons */
 button:hover {
-    background-color: #e5e5d7; /* Slightly darker beige on hover */
+    background-color: #e5e5d7; /* Couleur de fond plus foncée au survol */
 }
 
+/* Masque initialement le bouton de soumission */
 #submit {
-    display: none; /* Initially hide the submit button */
+    display: none; /* Cache le bouton de soumission */
 }
