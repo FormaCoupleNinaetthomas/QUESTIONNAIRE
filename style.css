@@ -18,9 +18,9 @@ body {
 .container {
     max-width: 900px; /* Largeur maximale du conteneur */
     width: 100%; /* Utilise toute la largeur disponible */
-    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
+    background-color: rgba(240, 255, 255, 0.7); /* Fond blanc avec transparence */
     border-radius: 8px; /* Arrondit les coins du conteneur */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
     padding: 20px; /* Padding interne du conteneur */
     text-align: center; /* Centre le texte à l'intérieur du conteneur */
 }
@@ -54,7 +54,7 @@ p {
     display: flex; /* Utilise Flexbox pour l'alignement */
     flex-direction: column; /* Aligne les éléments en colonne */
     align-items: center; /* Centre les éléments horizontalement */
-    margin-bottom: 15px; /* Espace entre chaque question */
+    margin-bottom: 0px; /* Espace entre chaque question */
 }
 
 /* Styles pour les étiquettes des champs */
@@ -223,13 +223,13 @@ p {
 
 /* Style pour l'étiquette "NÉGATIF" */
 .scale span:first-of-type {
-    color: red; /* Couleur rouge pour le texte "NÉGATIF" */
+    color: #855b56; /* Couleur rouge pour le texte "NÉGATIF" */
     margin-top: 10px; /* Espace au-dessus du texte */
 }
 
 /* Style pour l'étiquette "POSITIF" */
 .scale span:last-of-type {
-    color: green; /* Couleur verte pour le texte "POSITIF" */
+    color: #688556; /* Couleur verte pour le texte "POSITIF" */
     margin-top: 10px; /* Espace au-dessus du texte */
 }
 
@@ -238,7 +238,7 @@ button {
     display: block; /* Affiche le bouton comme un bloc */
     margin: 30px auto; /* Centré horizontalement avec une marge verticale */
     padding: 10px 20px; /* Padding interne du bouton */
-    background-color: #f5f5dc; /* Couleur de fond beige */
+    background-color: #C5AD82; /* Couleur de fond beige */
     color: #333; /* Couleur du texte en gris foncé */
     border: none; /* Supprime la bordure par défaut */
     border-radius: 20px; /* Coins arrondis du bouton */
@@ -251,7 +251,7 @@ button {
 
 /* Effet de survol pour les boutons */
 button:hover {
-    background-color: #e5e5d7; /* Couleur de fond plus foncée au survol */
+    background-color: #9C793C; /* Couleur de fond plus foncée au survol */
 }
 
 /* Masque initialement le bouton de soumission */
