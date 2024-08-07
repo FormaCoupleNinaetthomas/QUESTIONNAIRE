@@ -3,7 +3,7 @@
 /* Corps de la page */
 body {
     font-family: 'EB Garamond', serif;
-    background-image: url('image-background.jpg'); /* Assurez-vous que le chemin de l'image est correct */
+    background-image: url('background.jpg'); /* Assurez-vous que le chemin de l'image est correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
