@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évaluation des Compétences Relationnelles</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Évaluation des Compétences Relationnelles</h1>
+        <p>Pour chaque question, sélectionnez le cercle qui représente le mieux votre niveau de perception.</p>
+
+        <!-- Initial Questions -->
+        <div class="initial-questions active">
+            <h2>Informations Personnelles</h2>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sexe">Sexe :</label>
+            <select id="sexe" name="sexe" required>
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <option value="Autre">Autre (précisez)</option>
+            </select>
+            <input type="text" id="sexe-autre" name="sexe-autre" placeholder="Précisez si autre" style="display:none;">
+
+            <label for="situation-professionnelle">Situation Professionnelle :</label>
+            <select id="situation-professionnelle" name="situation-professionnelle" required>
+                <option value="Étudiant">Étudiant</option>
+                <option value="En emploi">En emploi</option>
+                <option value="Travailleur indépendant">Travailleur indépendant</option>
+                <option value="En recherche d'emploi">En recherche d'emploi</option>
+            </select>
+
+            <label for="situation-familiale">Situation Familiale :</label>
+            <select id="situation-familiale" name="situation-familiale" required>
+                <option value="En couple sans enfants">En couple sans enfants</option>
+                <option value="En couple avec enfants">En couple avec enfants (précisez combien)</option>
+                <option value="Autre">Autre (précisez)</option>
+            </select>
+            <input type="text" id="situation-familiale-details" name="situation-familiale-details" placeholder="Précisez" style="display:none;">
+
+            <label for="duree-relation">Durée de la Relation :</label>
+            <input type="text" id="duree-relation" name="duree-relation" required>
+
+            <label for="cohabitation">Co-habitation :</label>
+            <select id="cohabitation" name="cohabitation" required>
+                <option value="Oui, nous vivons ensemble">Oui, nous vivons ensemble (depuis combien de temps ?)</option>
+                <option value="Non, nous vivons séparément">Non, nous vivons séparément (pour quelles raisons ?)</option>
+            </select>
+            <input type="text" id="cohabitation-details" name="cohabitation-details" placeholder="Précisez" style="display:none;">
+
+            <label for="stress">Niveau de Stress Actuel (sur une échelle de 1 à 10) :</label>
+            <input type="number" id="stress" name="stress" min="1" max="10" required>
+
+            <label for="satisfaction">Votre niveau de satisfaction actuel dans votre relation (sur une échelle de 1 à 10) :</label>
+            <input type="number" id="satisfaction" name="satisfaction" min="1" max="10" required>
+
+            <label for="tensions">Quelles sont, selon vous, les principales sources de tension dans votre relation ?</label>
+            <input type="text" id="tensions" name="tensions" placeholder="Ex: travail, famille, finances, communication" required>
+
+            <label for="relation-famille">Quelle est votre relation actuelle avec la famille de votre partenaire ?</label>
+            <input type="number" id="relation-famille" name="relation-famille" min="1" max="10" required>
+            <input type="text" id="relation-famille-details" name="relation-famille-details" placeholder="Si < 5, précisez les raisons" style="display:none;">
+
+            <button id="start-questionnaire">Commencer le Questionnaire</button>
+        </div>
+
+        <!-- Questionnaire -->
+        <div id="questionnaire-container"></div>
+
+        <!-- Submit Button -->
+        <button id="submit" style="display:none;">Soumettre</button>
+    </div>
+</body>
+</html>
