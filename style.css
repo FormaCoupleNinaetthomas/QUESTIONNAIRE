@@ -45,6 +45,9 @@ p {
     border-radius: 4px;
     padding: 20px;
     background-color: #f5f5f5;
+    font-weight: bold; /* Set questions to bold */
+    font-family: 'Times New Roman', serif; /* Changed font family */
+    font-size: 1.2em; /* Increased font size */
 }
 
 .question.active {
@@ -128,25 +131,42 @@ h2 {
 }
 
 .scale .circle.selected {
-    background-color: #4caf50;
+    background-color: #f5f5dc; /* Set selected circle to beige */
     color: #fff;
+}
+
+.scale span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.scale span:first-of-type {
+    color: red; /* Negative label color */
+}
+
+.scale span:last-of-type {
+    color: green; /* Positive label color */
 }
 
 button {
     display: block;
     margin: 30px auto;
     padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #f5f5dc; /* Beige button color */
+    color: #333;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px; /* Rounded button corners */
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
+    text-transform: uppercase; /* Set button text to uppercase */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #e5e5d7; /* Slightly darker beige on hover */
 }
 
 #submit {
