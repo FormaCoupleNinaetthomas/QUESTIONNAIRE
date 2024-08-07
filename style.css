@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-image: url('image-background.jpg');
@@ -38,6 +39,47 @@ p {
     display: block;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column; /* Align questions vertically */
+    margin-bottom: 15px; /* Add space between each question */
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px; /* Optional: set a max width for inputs */
+    box-sizing: border-box; /* Ensure padding doesn't increase total width */
+    margin-bottom: 10px; /* Space below each input */
+}
+
+#start-questionnaire {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #f5f5dc; /* Beige button color */
+    color: #333;
+    border: none;
+    border-radius: 20px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    text-transform: uppercase; /* Set button text to uppercase */
+}
+
+#start-questionnaire:hover {
+    background-color: #e5e5d7; /* Slightly darker beige on hover */
+}
+
 .question {
     margin-top: 20px;
     display: none; /* Hide all questions initially */
@@ -60,12 +102,6 @@ p {
 
 .question:hover {
     transform: translateY(-2px); /* Slight lift effect on hover */
-}
-
-h2 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
 }
 
 .scale {
