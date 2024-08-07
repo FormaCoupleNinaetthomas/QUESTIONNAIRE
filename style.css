@@ -2,17 +2,18 @@
 
 /* Corps de la page */
 body {
-    font-family: 'EB Garamond', serif; /* Utilisation de la police EB Garamond */
-    background-image: url('image-background.jpg'); /* Assurez-vous que le chemin de l'image est correct */
+    font-family: 'EB Garamond', serif;
+    background-image: url('background.jpg'); /* Assurez-vous que le chemin de l'image est correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;    
-    display: flex; /* Centrage du contenu avec Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    min-height: 100vh; /* Hauteur minimale pour remplir l'écran */
-    margin: 50; /* Pas de marge autour de la page */
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Conteneur principal */
