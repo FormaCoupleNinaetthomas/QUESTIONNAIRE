@@ -1,198 +1,225 @@
-/* Utilise la police EB Garamond */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'); /* Importe la police EB Garamond de Google Fonts */
+/* style.css */
 
+/* Corps de la page */
 body {
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond à tout le document */
-    background-image: url('image-background.jpg'); /* Définit une image de fond pour le corps */
-    background-size: cover; /* Assure que l'image de fond couvre tout le corps de la page */
-    background-position: center; /* Centre l'image de fond */
-    margin: 0; /* Supprime la marge par défaut autour du corps */
-    padding: 20px; /* Ajoute un espacement intérieur autour du contenu */
-    display: flex; /* Utilise Flexbox pour le positionnement du contenu */
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center; /* Centre le contenu verticalement */
-    min-height: 100vh; /* Assure que le corps a au moins la hauteur de la fenêtre */
+    font-family: 'EB Garamond', serif; /* Utilisation de la police EB Garamond */
+    background-color: #f5f5f5; /* Couleur de fond douce pour l'arrière-plan */
+    display: flex; /* Centrage du contenu avec Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    min-height: 100vh; /* Hauteur minimale pour remplir l'écran */
+    margin: 0; /* Pas de marge autour de la page */
 }
 
+/* Conteneur principal */
 .container {
-    max-width: 800px; /* Définit la largeur maximale du conteneur */
-    width: 100%; /* Le conteneur occupe toute la largeur disponible */
-    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond blanche semi-transparente */
-    border-radius: 8px; /* Arrondit les coins du conteneur */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour du conteneur */
-    padding: 20px; /* Ajoute un espacement intérieur au conteneur */
-    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+    max-width: 900px; /* Largeur maximale du conteneur */
+    width: 100%; /* Utilise toute la largeur disponible */
+    background-color: rgba(200, 350, 400, 0.3); /* Fond blanc pour le conteneur */
+    padding: 20px; /* Espacement intérieur du conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+    border-radius: 75px; /* Bordure arrondie pour le conteneur */
+    margin: 0 auto; /* Centre horizontalement le conteneur */
 }
 
+/* Titre principal */
 h1 {
-    text-align: center; /* Centre le texte du titre */
-    color: #333; /* Définit la couleur du texte du titre */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond au titre */
+    text-align: center; /* Alignement du titre principal au centre */
+    font-size: 3em; /* Taille de police augmentée pour le titre */
+    margin-bottom: 50px; /* Espacement en dessous du titre */
+    color: #50411c; /* Couleur sombre pour le texte du titre */
 }
 
-p {
-    text-align: center; /* Centre le texte des paragraphes */
-    color: #666; /* Définit la couleur du texte des paragraphes */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux paragraphes */
-}
-
-.initial-questions {
-    display: block; /* Affiche les questions initiales */
-}
-
-.initial-questions.active {
-    display: block; /* Affiche les questions initiales actives */
+h2 {
+    font-size: 2em; /* Taille de police pour les sous-titres */
+    margin-bottom: 50px; /* Espacement en dessous des sous-titres */
+    color: #50411c; /* Couleur pour le texte des sous-titres */
+    text-align: center; /* Centrage des sous-titres */
 }
 
 .form-group {
-    display: flex; /* Utilise Flexbox pour aligner les éléments du groupe de formulaire */
-    flex-direction: column; /* Aligne les éléments en colonne */
-    align-items: center; /* Centre les éléments horizontalement */
-    margin-bottom: 15px; /* Ajoute un espacement inférieur entre les groupes de formulaire */
+    margin-bottom: 15px; /* Espace entre les groupes de formulaire */
+    text-align: center; /* Centre le texte et les éléments à l'intérieur du groupe */
 }
 
-.form-group label {
-    font-weight: bold; /* Met le texte des étiquettes en gras */
-    margin-bottom: 5px; /* Ajoute un espacement inférieur aux étiquettes */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux étiquettes */
+label {
+    text-align: center; /* Alignement du titre principal au centre */
+    display: block; /* Le label occupe toute la largeur */
+    margin-bottom: 5px; /* Espacement entre le label et l'input */
+    color: #50411c; /* Couleur sombre pour le label */
 }
 
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group select {
-    padding: 8px; /* Ajoute un espacement intérieur aux champs de saisie */
-    border: 1px solid #ccc; /* Définit une bordure grise autour des champs */
-    border-radius: 4px; /* Arrondit les coins des champs */
-    width: 100%; /* Les champs occupent toute la largeur disponible */
-    max-width: 300px; /* Limite la largeur maximale des champs */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-    margin-bottom: 10px; /* Ajoute un espacement inférieur entre les champs */
-    text-align: left; /* Aligne le texte à gauche à l'intérieur des champs */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux champs */
+input[type="text"],
+input[type="number"],
+select {
+    text-align: center; /* Alignement du titre principal au centre */
+    width: 50%; /* Largeur des champs de saisie */
+    padding: 8px; /* Espacement intérieur des champs */
+    border: 1px solid #ddd; /* Bordure légère pour les champs */
+    border-radius: 6px; /* Bordure arrondie pour les champs */
+    font-size: 1em; /* Taille de police standard pour les champs */
+    color: #50411c; /* Couleur du texte dans les champs */
+    display: block; /* Affichage en bloc pour que la marge auto fonctionne */
+    margin: 0 auto; /* Centre les champs horizontalement */
+    font-family: 'EB Garamond', serif; /* Assurez-vous que la police est appliquée ici aussi */
 }
 
-#start-questionnaire {
-    display: block; /* Affiche le bouton de démarrage du questionnaire */
-    margin: 30px auto; /* Centre le bouton horizontalement avec un espacement vertical */
-    padding: 10px 20px; /* Ajoute un espacement intérieur au bouton */
-    background-color: #f5f5dc; /* Définit une couleur de fond beige pour le bouton */
-    color: #333; /* Définit la couleur du texte du bouton */
-    border: none; /* Supprime la bordure par défaut du bouton */
-    border-radius: 20px; /* Arrondit fortement les coins du bouton */
-    cursor: pointer; /* Change le curseur en pointeur lors du survol */
-    font-size: 1em; /* Définit la taille de la police du texte du bouton */
-    transition: background-color 0.3s; /* Ajoute une transition pour la couleur de fond du bouton */
-    text-transform: uppercase; /* Met le texte du bouton en majuscules */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond au bouton */
+button {
+    background-color: #efe8d6; /* Couleur beige pour le bouton */
+    border: none; /* Pas de bordure pour le bouton */
+    padding: 18px 40px; /* Espacement intérieur du bouton */
+    border-radius: 30px; /* Bordure arrondie pour le bouton */
+    cursor: pointer; /* Curseur de pointeur pour indiquer une interaction */
+    font-size: 1.5em; /* Taille de police standard pour le texte du bouton */
+    color: #50411c; /* Couleur du texte du bouton */
+    display: block; /* Le bouton occupe toute la largeur */
+    margin: 50px auto; /* Centrer le bouton avec une marge automatique */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+    font-family: 'EB Garamond', serif; /* Assurez-vous que la police est appliquée ici aussi */
 }
 
-#start-questionnaire:hover {
-    background-color: #e5e5d7; /* Change la couleur de fond du bouton au survol */
+button:hover {
+    background-color: #d4c7a6; /* Couleur plus claire pour le survol du bouton */
 }
 
+/* Style des questions */
 .question {
-    display: none; /* Masque toutes les questions par défaut */
-    margin-bottom: 20px; /* Ajoute un espacement inférieur aux questions */
-    text-align: center; /* Centre le texte des questions */
+    display: none; /* Toutes les questions sont cachées par défaut */
+    margin-bottom: 50px; /* Espacement en dessous de chaque question */
 }
 
 .question.active {
-    display: block; /* Affiche uniquement la question active */
+    display: block; /* Seule la question active est affichée */
 }
 
 .question p {
-    font-weight: bold; /* Met le texte des questions en gras */
-    font-size: 1.1em; /* Augmente la taille de la police des questions */
+    font-weight: bold; /* Mettre le texte en gras pour la question */
+    font-size: 1.25em; /* Taille de police augmentée pour les questions */
+    margin-bottom: 50px; /* Espacement en dessous des questions */
+    color: #4a4a4a; /* Couleur sombre pour les questions */
 }
 
+/* Echelle des cercles */
 .scale {
-    display: flex; /* Utilise flexbox pour aligner les cercles horizontalement */
-    justify-content: space-between; /* Crée un espace égal entre les cercles */
-    align-items: center; /* Centre les cercles verticalement */
-    position: relative; /* Permet un positionnement absolu des labels */
-    margin-top: 20px; /* Ajoute un espace au-dessus des cercles */
+    display: flex; /* Utiliser flex pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre tous les cercles */
+    align-items: center; /* Aligne verticalement au centre */
+    margin-bottom: 50px; /* Espacement en dessous de l'échelle */
+    position: relative; /* Position relative pour le positionnement des labels */
 }
 
+/* Style des cercles avec tailles variées */
 .circle {
-    width: 25px; /* Définit la largeur des cercles */
-    height: 25px; /* Définit la hauteur des cercles pour les rendre ronds */
-    background-color: #ddd; /* Définit la couleur de fond des cercles */
-    border-radius: 50%; /* Rend les cercles parfaitement ronds */
-    cursor: pointer; /* Change le curseur en pointeur lors du survol */
-    transition: transform 0.2s, background-color 0.2s; /* Ajoute une transition pour l'animation */
-    display: inline-block; /* Aligne les cercles en ligne */
+    background-color: #ddd; /* Couleur de fond pour le cercle */
+    border-radius: 50%; /* Cercle complet */
+    cursor: pointer; /* Curseur de pointeur pour indiquer une interaction */
+    transition: transform 0.2s, background-color 0.2s; /* Transitions pour les effets */
+    margin: 2px; /* Espace entre chaque cercle */
+    position: relative; /* Pour positionner les valeurs sur chaque cercle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Masquer le texte dans les cercles */
 }
 
-.circle.selected {
-    background-color: #e5e5d7; /* Change la couleur de fond des cercles sélectionnés */
+/* Taille des cercles */
+.circle[data-value="-10"],
+.circle[data-value="10"] {
+    width: 55px;
+    height: 80px;
 }
 
-.scale .circle[data-value="0"] {
-    background-color: #999; /* Change la couleur de fond du cercle central */
+.circle[data-value="-9"],
+.circle[data-value="9"] {
+    width: 48px;
+    height: 68px;
 }
 
-.scale span {
-    position: absolute; /* Positionnement absolu pour placer les labels */
-    width: 100%; /* S'étend sur toute la largeur du conteneur */
-    display: flex; /* Utilise flexbox pour positionner les labels */
-    justify-content: space-between; /* Espacement égal entre les labels */
-    top: 35px; /* Position des labels sous les cercles, ajuste cette valeur si nécessaire */
-    font-weight: bold; /* Met en gras le texte des labels */
-    font-size: 1em; /* Définit la taille de la police des labels */
+.circle[data-value="-8"],
+.circle[data-value="8"] {
+    width: 40px;
+    height: 60px;
 }
 
-.scale .negative {
-    color: red; /* Met le texte "NÉGATIF" en rouge */
-    position: absolute; /* Position absolue pour un placement précis */
-    left: 0; /* Aligne le texte "NÉGATIF" à gauche */
-    transform: translateX(-50%); /* Ajuste pour le centrer par rapport au début du conteneur */
+.circle[data-value="-7"],
+.circle[data-value="7"] {
+    width: 32px;
+    height: 52px;
 }
 
-.scale .neutral {
-    color: gray; /* Met le texte "Neutre" en gris */
-    position: absolute; /* Position absolue pour un placement précis */
-    left: 50%; /* Centre le texte "Neutre" horizontalement */
-    transform: translateX(-50%); /* Centre le texte par rapport au cercle central */
+.circle[data-value="-6"],
+.circle[data-value="6"] {
+    width: 28px;
+    height: 48px;
 }
 
-.scale .positive {
-    color: green; /* Met le texte "POSITIF" en vert */
-    position: absolute; /* Position absolue pour un placement précis */
-    right: 0; /* Aligne le texte "POSITIF" à droite */
-    transform: translateX(50%); /* Ajuste pour le centrer par rapport à la fin du conteneur */
+.circle[data-value="-5"],
+.circle[data-value="5"] {
+    width: 24px;
+    height: 44px;
 }
 
-p.question {
-    font-weight: bold; /* Met la question en gras */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond */
-    font-size: 20px; /* Augmente la taille de la police de la question */
-    margin-bottom: 10px; /* Ajoute un espace sous la question */
-    text-align: center; /* Centre le texte de la question */
+.circle[data-value="-4"],
+.circle[data-value="4"] {
+    width: 21px;
+    height: 41px;
 }
 
-.next {
-    display: block; /* Fait en sorte que le bouton soit un bloc */
-    margin: 30px auto; /* Centre le bouton horizontalement */
-    padding: 10px 20px; /* Ajoute du padding autour du texte du bouton */
-    background-color: #d6cbbf; /* Change la couleur de fond du bouton */
-    color: #333; /* Change la couleur du texte du bouton */
-    border: none; /* Retire la bordure du bouton */
-    border-radius: 20px; /* Arrondit fortement les coins du bouton */
-    cursor: pointer; /* Change le curseur en pointeur lors du survol */
-    font-size: 1em; /* Définit la taille de la police du texte du bouton */
-    transition: background-color 0.3s; /* Ajoute une transition pour la couleur de fond du bouton */
-    text-transform: uppercase; /* Met le texte du bouton en majuscules */
-    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond au bouton */
+.circle[data-value="-3"],
+.circle[data-value="3"] {
+    width: 18px;
+    height: 39px;
 }
 
-.next:hover {
-    background-color: #e5e5d7; /* Change la couleur de fond du bouton au survol */
+.circle[data-value="-2"],
+.circle[data-value="2"] {
+    width: 17px;
+    height: 34px;
 }
 
-#submit {
-    display: none; /* Masque le bouton de soumission par défaut */
+.circle[data-value="-1"],
+.circle[data-value="1"] {
+    width: 17px;
+    height: 31px;
 }
 
-#submit.active {
-    display: block; /* Affiche le bouton de soumission une fois toutes les questions répondues */
+.circle[data-value="0"] {
+    width: 20px; /* Plus petit cercle au centre */
+    height: 29px;
+}
+
+/* Effet au survol des cercles */
+.scale .circle:hover {
+    background-color: #bbb; /* Couleur plus sombre au survol */
+}
+
+/* Cercle sélectionné */
+.scale .circle.selected {
+    background-color: #856717; /* Couleur beige quand sélectionné */
+}
+
+/* Labels d'échelle */
+.scale-span {
+    position: absolute; /* Positionnement absolu pour les labels */
+    top: 90px; /* Positionnement sous les cercles */
+    font-size: 1em; /* Taille de police pour les labels */
+    color: #555; /* Couleur du texte pour les labels */
+}
+
+/* Labels négatif et positif */
+.negative-label {
+    left: 10%; /* Position sous le cercle le plus à gauche */
+    color: red; /* Couleur rouge pour le label négatif */
+    font-size: 2em; /* Taille de police pour les labels */
+      font-weight: bold; /* Mettre le texte en gras pour la question */
+
+  
+}
+
+.positive-label {
+    right: 10%; /* Position sous le cercle le plus à droite */
+    color: green; /* Couleur verte pour le label positif */
+      font-size: 2em; /* Taille de police pour les labels */
+      font-weight: bold; /* Mettre le texte en gras pour la question */
+
 }
