@@ -4,98 +4,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Pour le responsive design -->
     <title>Questionnaire</title> <!-- Titre de la page -->
     <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS externe -->
-    <style>
-        /* Inclut les styles CSS essentiels pour le cas où le fichier externe ne serait pas chargé */
-        body {
-            font-family: 'EB Garamond', serif; /* Police principale de la page */
-            background-color: #f0f0f0; /* Couleur de fond de la page */
-            display: flex; /* Utilisation du flexbox pour centrer le contenu */
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Assure que le conteneur occupe toute la hauteur de la fenêtre */
-            margin: 0; /* Retire les marges par défaut */
-        }
-    </style>
 </head>
 <body>
     <div class="container"> <!-- Conteneur principal centré -->
         <h1>Questionnaire</h1> <!-- Titre principal du questionnaire -->
         
-        <div class="initial-questions active"><!-- Initial Questions -->
-            <h2>Informations Personnelles</h2>
+        <div class="initial-questions active"><!-- Questions initiales -->
+            <h2>Informations Personnelles</h2> <!-- Titre de la section -->
             <div class="form-group">
-                <label for="prenom">Prénom :</label>
-                <input type="text" id="prenom" name="prenom" required>
+                <label for="prenom">Prénom</label> <!-- Label pour le champ Prénom -->
+                <input type="text" id="prenom" name="prenom" required> <!-- Champ de saisie pour le Prénom -->
             </div>
             <div class="form-group">
-                <label for="age">Âge :</label>
-                <input type="number" id="age" name="age" required>
+                <label for="age">Âge</label> <!-- Label pour le champ Âge -->
+                <input type="number" id="age" name="age" required> <!-- Champ de saisie pour l'Âge -->
             </div>
             <div class="form-group">
-                <label for="sexe">Sexe :</label>
+                <label for="sexe">Sexe</label> <!-- Label pour le champ Sexe -->
                 <select id="sexe" name="sexe" required>
-                    <option value="">Choisir</option>
+                    <option value=""></option> <!-- Option vide pour choisir -->
                     <option value="Homme">Homme</option>
                     <option value="Femme">Femme</option>
-                    <option value="Autre">Autre (précisez)</option>
                 </select>
-                <input type="text" id="sexe-autre" name="sexe-autre" placeholder="Précisez si autre" style="display:none;">
             </div>
             <div class="form-group">
-                <label for="situation-professionnelle">Situation Professionnelle :</label>
+                <label for="situation-professionnelle">Situation Professionnelle</label> <!-- Label pour le champ de situation professionnelle -->
                 <select id="situation-professionnelle" name="situation-professionnelle" required>
-                    <option value="">Choisir</option>
-                      <option value="Étudiant">Étudiant</option>
+                    <option value=""></option> <!-- Option vide pour choisir -->
+                    <option value="Étudiant">Étudiant</option>
                     <option value="En emploi">En emploi</option>
                     <option value="Travailleur indépendant">Travailleur indépendant</option>
                     <option value="En recherche d'emploi">En recherche d'emploi</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="situation-familiale">Situation Familiale :</label>
+                <label for="situation-familiale">Situation Familiale</label> <!-- Label pour le champ de situation familiale -->
                 <select id="situation-familiale" name="situation-familiale" required>
-                    <option value="">Choisir</option>
-                       <option value="En couple sans enfants">En couple sans enfants</option>
-                    <option value="En couple avec enfants">En couple avec enfants (précisez combien)</option>
-                    <option value="Autre">Autre (précisez)</option>
+                    <option value=""></option> <!-- Option vide pour choisir -->
+                    <option value="En couple sans enfants">En couple sans enfants</option>
+                    <option value="En couple avec 1 enfant">En couple avec 1 enfant</option>
+                    <option value="En couple avec 2 enfants">En couple avec 2 enfants</option>
+                    <option value="En couple avec 3 enfants">En couple avec 3 enfants</option>
+                    <option value="En couple avec plus de 3 enfants">En couple avec plus de 3 enfants</option>
                 </select>
-                <input type="text" id="situation-familiale-details" name="situation-familiale-details" placeholder="Précisez" style="display:none;">
             </div>
             <div class="form-group">
-                <label for="duree-relation">Durée de la Relation :</label>
-                <input type="text" id="duree-relation" name="duree-relation" required>
+                <label for="duree-relation">Durée de la Relation</label> <!-- Label pour le champ de durée de la relation -->
+                <input type="text" id="duree-relation" name="duree-relation" required> <!-- Champ de saisie pour la durée de la relation -->
             </div>
             <div class="form-group">
-                <label for="cohabitation">Co-habitation :</label>
+                <label for="cohabitation">Co-habitation</label> <!-- Label pour le champ de cohabitation -->
                 <select id="cohabitation" name="cohabitation" required>
-                    <option value="">Choisir</option>
-                    <option value="Oui, nous vivons ensemble">Oui, nous vivons ensemble (depuis combien de temps ?)</option>
-                    <option value="Non, nous vivons séparément">Non, nous vivons séparément (pour quelles raisons ?)</option>
+                    <option value=""></option> <!-- Option vide pour choisir -->
+                    <option value="Oui, nous vivons ensemble">Oui, nous vivons ensemble</option>
+                    <option value="Non, nous vivons séparément">Non, nous vivons séparément</option>
                 </select>
-                <input type="text" id="cohabitation-details" name="cohabitation-details" placeholder="Précisez" style="display:none;">
+                <input type="text" id="cohabitation-details" name="cohabitation-details" placeholder="Précisez" style="display:none;"> <!-- Champ de saisie pour les détails de la cohabitation -->
             </div>
             <div class="form-group">
-                <label for="stress">Niveau de Stress Actuel (sur une échelle de 1 à 10) :</label>
-                <input type="number" id="stress" name="stress" min="1" max="10" required>
+                <label for="stress">Niveau de Stress Actuel (sur une échelle de 1 à 10)</label> <!-- Label pour le champ de stress -->
+                <input type="number" id="stress" name="stress" min="1" max="10" required> <!-- Champ de saisie pour le niveau de stress -->
             </div>
             <div class="form-group">
-                <label for="satisfaction">Votre niveau de satisfaction actuel dans votre relation (sur une échelle de 1 à 10) :</label>
-                <input type="number" id="satisfaction" name="satisfaction" min="1" max="10" required>
+                <label for="satisfaction">Votre niveau de satisfaction actuel dans votre relation (sur une échelle de 1 à 10)</label> <!-- Label pour le champ de satisfaction -->
+                <input type="number" id="satisfaction" name="satisfaction" min="1" max="10" required> <!-- Champ de saisie pour le niveau de satisfaction -->
             </div>
             <div class="form-group">
-                <label for="tensions">Quelles sont, selon vous, les principales sources de tension dans votre relation ?</label>
-                <input type="text" id="tensions" name="tensions" placeholder="Ex: travail, famille, finances, communication" required>
+                <label for="tensions">Quelles sont, selon vous, les principales sources de tension dans votre relation ?</label> <!-- Label pour le champ de tensions -->
+                <input type="text" id="tensions" name="tensions" placeholder="Ex: travail, famille, finances, communication" required> <!-- Champ de saisie pour les tensions -->
             </div>
             <div class="form-group">
-                <label for="relation-famille">Quelle est votre relation actuelle avec la famille de votre partenaire ?</label>
-                <input type="number" id="relation-famille" name="relation-famille" min="1" max="10" required>
-                <input type="text" id="relation-famille-details" name="relation-famille-details" placeholder="Si < 5, précisez les raisons" style="display:none;">
+                <label for="relation-famille">Quelle est votre relation actuelle avec la famille de votre partenaire ?</label> <!-- Label pour le champ de relation familiale -->
+                <input type="number" id="relation-famille" name="relation-famille" min="1" max="10" required> <!-- Champ de saisie pour la relation avec la famille -->
+                <input type="text" id="relation-famille-details" name="relation-famille-details" placeholder="Si < 5, précisez les raisons" style="display:none;"> <!-- Champ de saisie pour les détails si la relation est <5 -->
             </div>
 
-            <button id="start-questionnaire">Commencer le Questionnaire</button>
+            <button id="start-questionnaire">Commencer le Questionnaire</button> <!-- Bouton pour commencer le questionnaire -->
         </div>
 
-        <div id="instruction" style="display: none;">Pour chaque question, sélectionnez le cercle qui représente le mieux votre niveau de perception.</div> <!-- Instructions pour la section du questionnaire, cachées initialement -->
+        <div id="instruction" style="display: none;">Pour chaque question, sélectionnez le cercle qui représente le mieux votre niveau de perception.</div> 
+      <!-- Instructions pour la section du questionnaire, cachées initialement -->
         
         <div id="questionnaire-container" style="display: none;"></div> <!-- Conteneur pour les questions du questionnaire, caché initialement -->
 
