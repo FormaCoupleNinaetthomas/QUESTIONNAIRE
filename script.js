@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Liste complète des catégories et questions
     const questionsData = [
         {
             category: "A. Communication",
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalQuestions = questionsData.reduce((sum, category) => sum + category.questions.length, 0);
     let answers = new Array(totalQuestions).fill(null);
 
-    // Génère dynamiquement le HTML pour chaque catégorie de questions
+    // Generate HTML for each question
     questionsData.forEach((categoryData, categoryIndex) => {
         const categoryDiv = document.createElement('div');
         categoryDiv.classList.add('category');
@@ -157,13 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 circle.classList.add('circle');
                 circle.dataset.value = i;
                 circle.textContent = i;
+
+                // Add event listener for circle click
                 circle.addEventListener('click', () => {
                     // Remove 'selected' class from all circles
                     Array.from(scaleDiv.getElementsByClassName('circle')).forEach(c => c.classList.remove('selected'));
                     // Add 'selected' class to clicked circle
                     circle.classList.add('selected');
+                    // Store selected answer
                     answers[questionCounter - 1] = i;
                 });
+
                 scaleDiv.appendChild(circle);
             }
 
