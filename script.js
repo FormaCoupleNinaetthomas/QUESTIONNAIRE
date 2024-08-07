@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const questionsData = [
         {
@@ -139,7 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scaleDiv.classList.add('scale');
 
             const negativeLabel = document.createElement('span');
-            negativeLabel.textContent = "Négatif";
+            negativeLabel.textContent = "NÉGATIF";
+            negativeLabel.classList.add('negative-label');
             scaleDiv.appendChild(negativeLabel);
 
             for (let i = -10; i <= 10; i++) {
@@ -156,8 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 scaleDiv.appendChild(circle);
             }
 
+            const neutralLabel = document.createElement('span');
+            neutralLabel.textContent = "Neutre";
+            neutralLabel.classList.add('neutral-label');
+            scaleDiv.appendChild(neutralLabel);
+
             const positiveLabel = document.createElement('span');
-            positiveLabel.textContent = "Positif";
+            positiveLabel.textContent = "POSITIF";
+            positiveLabel.classList.add('positive-label');
             scaleDiv.appendChild(positiveLabel);
 
             questionDiv.appendChild(scaleDiv);
@@ -198,12 +207,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const situationFamiliale = document.getElementById('situation-familiale').value;
         const dureeRelation = document.getElementById('duree-relation').value;
         const cohabitation = document.getElementById('cohabitation').value;
+        const cohabitationDetails = document.getElementById('cohabitation-details').value;
         const stress = document.getElementById('stress').value;
         const satisfaction = document.getElementById('satisfaction').value;
         const tensions = document.getElementById('tensions').value;
         const relationFamille = document.getElementById('relation-famille').value;
 
-        if (!prenom || !age || !sexe || !situationProfessionnelle || !situationFamiliale || !dureeRelation || !cohabitation || !stress || !satisfaction || !tensions || !relationFamille) {
+        if (!prenom || !age || !sexe || !situationProfessionnelle || !situationFamiliale || !dureeRelation || !cohabitation || !cohabitationDetails || !stress || !satisfaction || !tensions || !relationFamille) {
             alert("Veuillez remplir toutes les informations personnelles avant de commencer.");
             return;
         }
@@ -217,6 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
         firstQuestionDiv.classList.add('active');
 
         console.log('Début du questionnaire - première question affichée');
+    });
+
+    // Gestion du changement de la sélection de cohabitation pour afficher le champ de texte
+    document.getElementById('cohabitation').addEventListener('change', function () {
+        const detailsInput = document.getElementById('cohabitation-details');
+        detailsInput.style.display = 'block';
     });
 
     // Submit button event
@@ -233,25 +249,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const noteSur20 = ((averageScore + 10) / 20) * 20; // Convertir -10 à 10 en 0 à 20
 
         const resultText = `
-            Informations Personnelles:
-            Prénom: ${document.getElementById('prenom').value}
-            Âge: ${document.getElementById('age').value}
-            Sexe: ${document.getElementById('sexe').value}
-            Situation Professionnelle: ${document.getElementById('situation-professionnelle').value}
-            Situation Familiale: ${document.getElementById('situation-familiale').value}
-            Durée de la Relation: ${document.getElementById('duree-relation').value}
-            Co-habitation: ${document.getElementById('cohabitation').value}
-            Niveau de Stress Actuel: ${document.getElementById('stress').value}
-            Niveau de Satisfaction Actuel: ${document.getElementById('satisfaction').value}
-            Sources de Tension: ${document.getElementById('tensions').value}
-            Relation avec la Famille du Partenaire: ${document.getElementById('relation-famille').value}
+            Informations Personnelles :
+            Prénom : ${document.getElementById('prenom').value}
+            Âge : ${document.getElementById('age').value}
+            Sexe : ${document.getElementById('sexe').value}
+            Situation Professionnelle : ${document.getElementById('situation-professionnelle').value}
+            Situation Familiale : ${document.getElementById('situation-familiale').value}
+            Durée de la Relation : ${document.getElementById('duree-relation').value}
+            Co-habitation : ${document.getElementById('cohabitation').value}, Détails : ${document.getElementById('cohabitation-details').value}
+            Niveau de Stress Actuel : ${document.getElementById('stress').value}
+            Niveau de Satisfaction Actuel : ${document.getElementById('satisfaction').value}
+            Sources de Tension : ${document.getElementById('tensions').value}
+            Relation avec la Famille du Partenaire : ${document.getElementById('relation-famille').value}
 
-            Résultats du Questionnaire:
-            Moyenne des réponses impaires: ${oddAverage.toFixed(2)}
-            Moyenne des réponses paires: ${evenAverage.toFixed(2)}
-            Note sur 20: ${noteSur20.toFixed(2)}
+            Résultats du Questionnaire :
+            Moyenne des réponses impaires : ${oddAverage.toFixed(2)}
+            Moyenne des réponses paires : ${evenAverage.toFixed(2)}
+            Note sur 20 : ${noteSur20.toFixed(2)}
 
-            Réponses complètes: ${answers.join(', ')}
+            Réponses complètes : ${answers.join(' - ')}
         `;
 
         // Téléchargement du fichier .txt
@@ -269,3 +285,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`Progression: Question ${questionCounter + 1} sur ${totalQuestions}`);
     }
 });
+
