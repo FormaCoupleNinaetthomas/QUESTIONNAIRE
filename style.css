@@ -1,3 +1,112 @@
+/* styles.css */
+
+/* Utilise la police EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'); /* Importe la police EB Garamond de Google Fonts */
+
+body {
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond à tout le document */
+    background-image: url('image-background.jpg'); /* Définit une image de fond pour le corps */
+    background-size: cover; /* Assure que l'image de fond couvre tout le corps de la page */
+    background-position: center; /* Centre l'image de fond */
+    margin: 0; /* Supprime la marge par défaut autour du corps */
+    padding: 20px; /* Ajoute un espacement intérieur autour du contenu */
+    display: flex; /* Utilise Flexbox pour le positionnement du contenu */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    min-height: 100vh; /* Assure que le corps a au moins la hauteur de la fenêtre */
+}
+
+.container {
+    max-width: 800px; /* Définit la largeur maximale du conteneur */
+    width: 100%; /* Le conteneur occupe toute la largeur disponible */
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond blanche semi-transparente */
+    border-radius: 8px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour du conteneur */
+    padding: 20px; /* Ajoute un espacement intérieur au conteneur */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+}
+
+h1 {
+    text-align: center; /* Centre le texte du titre */
+    color: #333; /* Définit la couleur du texte du titre */
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond au titre */
+}
+
+p {
+    text-align: center; /* Centre le texte des paragraphes */
+    color: #666; /* Définit la couleur du texte des paragraphes */
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux paragraphes */
+}
+
+.initial-questions {
+    display: block; /* Affiche les questions initiales */
+}
+
+.initial-questions.active {
+    display: block; /* Affiche les questions initiales actives */
+}
+
+.form-group {
+    display: flex; /* Utilise Flexbox pour aligner les éléments du groupe de formulaire */
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-bottom: 15px; /* Ajoute un espacement inférieur entre les groupes de formulaire */
+}
+
+.form-group label {
+    font-weight: bold; /* Met le texte des étiquettes en gras */
+    margin-bottom: 5px; /* Ajoute un espacement inférieur aux étiquettes */
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux étiquettes */
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 8px; /* Ajoute un espacement intérieur aux champs de saisie */
+    border: 1px solid #ccc; /* Définit une bordure grise autour des champs */
+    border-radius: 4px; /* Arrondit les coins des champs */
+    width: 100%; /* Les champs occupent toute la largeur disponible */
+    max-width: 300px; /* Limite la largeur maximale des champs */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    margin-bottom: 10px; /* Ajoute un espacement inférieur entre les champs */
+    text-align: left; /* Aligne le texte à gauche à l'intérieur des champs */
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond aux champs */
+}
+
+#start-questionnaire {
+    display: block; /* Affiche le bouton de démarrage du questionnaire */
+    margin: 30px auto; /* Centre le bouton horizontalement avec un espacement vertical */
+    padding: 10px 20px; /* Ajoute un espacement intérieur au bouton */
+    background-color: #f5f5dc; /* Définit une couleur de fond beige pour le bouton */
+    color: #333; /* Définit la couleur du texte du bouton */
+    border: none; /* Supprime la bordure par défaut du bouton */
+    border-radius: 20px; /* Arrondit fortement les coins du bouton */
+    cursor: pointer; /* Change le curseur en pointeur lors du survol */
+    font-size: 1em; /* Définit la taille de la police du texte du bouton */
+    transition: background-color 0.3s; /* Ajoute une transition pour la couleur de fond du bouton */
+    text-transform: uppercase; /* Met le texte du bouton en majuscules */
+    font-family: 'EB Garamond', serif; /* Applique la police EB Garamond au bouton */
+}
+
+#start-questionnaire:hover {
+    background-color: #e5e5d7; /* Change la couleur de fond du bouton au survol */
+}
+
+.question {
+    display: none; /* Masque toutes les questions par défaut */
+    margin-bottom: 20px; /* Ajoute un espacement inférieur aux questions */
+    text-align: center; /* Centre le texte des questions */
+}
+
+.question.active {
+    display: block; /* Affiche uniquement la question active */
+}
+
+.question p {
+    font-weight: bold; /* Met le texte des questions en gras */
+    font-size: 1.1em; /* Augmente la taille de la police des questions */
+}
+
 .scale {
     display: flex; /* Utilise flexbox pour aligner les cercles horizontalement */
     justify-content: space-between; /* Crée un espace égal entre les cercles */
