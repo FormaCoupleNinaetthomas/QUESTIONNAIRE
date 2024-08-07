@@ -20,7 +20,7 @@ body {
 .container {
     max-width: 900px; /* Largeur maximale du conteneur */
     width: 100%; /* Utilise toute la largeur disponible */
-    background-color: rgba(200, 350, 400, 0.3); /* Fond blanc pour le conteneur */
+    background-color: rgba(350, 350, 400, 0.3); /* Fond blanc pour le conteneur */
     padding: 20px; /* Espacement intérieur du conteneur */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
     border-radius: 75px; /* Bordure arrondie pour le conteneur */
