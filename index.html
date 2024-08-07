@@ -56,15 +56,15 @@
         <label for="duree-relation">Durée de la Relation</label>
         <input type="text" id="duree-relation" name="duree-relation" required>
     </div>
-    <div class="form-group">
-        <label for="cohabitation">Co-habitation</label>
-        <select id="cohabitation" name="cohabitation" required>
-            <option value="">Choisir</option>
-            <option value="Oui, nous vivons ensemble">Oui, nous vivons ensemble (depuis combien de temps ?)</option>
-            <option value="Non, nous vivons séparément">Non, nous vivons séparément (pour quelles raisons ?)</option>
-        </select>
-        <input type="text" id="cohabitation-details" name="cohabitation-details" placeholder="Précisez" style="display:none;">
-    </div>
+<div class="form-group">
+    <label for="cohabitation">Co-habitation :</label>
+    <select id="cohabitation" name="cohabitation" required>
+        <option value="" disabled selected>Choisir</option>
+        <option value="vivre_ensemble">Oui, nous vivons ensemble</option>
+        <option value="vivre_separement">Non, nous vivons séparément</option>
+    </select>
+    <input type="text" id="cohabitation-details" name="cohabitation-details" placeholder="Précisez depuis combien de temps ou pour quelles raisons" style="display:none;">
+</div>
     <div class="form-group">
         <label for="stress">Niveau de Stress Actuel (sur une échelle de 1 à 10)</label>
         <input type="number" id="stress" name="stress" min="1" max="10" required>
