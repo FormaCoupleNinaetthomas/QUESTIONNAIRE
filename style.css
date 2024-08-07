@@ -63,6 +63,7 @@ h2 {
     align-items: center;
     padding: 0 5px;
     position: relative;
+    margin: 10px 0; /* Added margin for spacing */
 }
 
 .circle {
@@ -75,6 +76,7 @@ h2 {
     display: inline-block;
     text-align: center;
     line-height: 30px;
+    margin: 0 4px; /* Adjust spacing between circles */
 }
 
 .circle:hover {
