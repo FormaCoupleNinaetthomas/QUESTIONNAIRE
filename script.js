@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const questionsData = [
         {
@@ -121,132 +119,121 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const questionnaireContainer = document.getElementById('questionnaire-container');
-    const instruction = document.getElementById('instruction');
-    let questionCounter = 0; // Start from 0
-    const totalQuestions = questionsData.reduce((sum, category) => sum + category.questions.length, 0);
-    let answers = new Array(totalQuestions).fill(null);
+    const questionnaireContainer = document.getElementById('questionnaire-container'); // Conteneur du questionnaire
+    const instruction = document.getElementById('instruction'); // Instruction pour remplir le questionnaire
+    let questionCounter = 0; // Démarre à 0 pour le compteur de questions
+    const totalQuestions = questionsData.reduce((sum, category) => sum + category.questions.length, 0); // Calcule le nombre total de questions
+    let answers = new Array(totalQuestions).fill(null); // Initialise les réponses avec des valeurs null
 
     // Génère dynamiquement le HTML pour chaque catégorie de questions
     questionsData.forEach((categoryData) => {
         categoryData.questions.forEach((questionText, index) => {
-            const questionDiv = document.createElement('div');
-            questionDiv.classList.add('question');
+            const questionDiv = document.createElement('div'); // Crée un élément div pour chaque question
+            questionDiv.classList.add('question'); // Ajoute la classe "question"
 
-            const questionTitle = document.createElement('p');
-            questionTitle.textContent = questionText;
-            questionDiv.appendChild(questionTitle);
+            const questionTitle = document.createElement('p'); // Crée un élément paragraphe pour le titre de la question
+            questionTitle.textContent = questionText; // Définit le texte de la question
+            questionDiv.appendChild(questionTitle); // Ajoute le titre à la div question
 
-            const scaleDiv = document.createElement('div');
-            scaleDiv.classList.add('scale');
+            const scaleDiv = document.createElement('div'); // Crée un élément div pour l'échelle
+            scaleDiv.classList.add('scale'); // Ajoute la classe "scale" à la div
 
-            const negativeLabel = document.createElement('span');
-            negativeLabel.textContent = "Ne Pense Pas";
-            negativeLabel.classList.add('negative-label');
-            scaleDiv.appendChild(negativeLabel);
+            const negativeLabel = document.createElement('span'); // Crée un élément span pour le label négatif
+            negativeLabel.textContent = "NÉGATIF"; // Définit le texte du label négatif
+            negativeLabel.classList.add('negative'); // Ajoute la classe "negative"
+            scaleDiv.appendChild(negativeLabel); // Ajoute le label à la div de l'échelle
 
             for (let i = -10; i <= 10; i++) {
-                const circle = document.createElement('div');
-                circle.classList.add('circle');
-                circle.dataset.value = i;
-                circle.addEventListener('click', () => {
-                    // Remove 'selected' class from all circles
-                    Array.from(scaleDiv.getElementsByClassName('circle')).forEach(c => c.classList.remove('selected'));
-                    // Add 'selected' class to clicked circle
-                    circle.classList.add('selected');
-                    answers[questionCounter] = i;
+                const circle = document.createElement('div'); // Crée un élément div pour chaque cercle
+                circle.classList.add('circle'); // Ajoute la classe "circle"
+                circle.dataset.value = i; // Définit la valeur de chaque cercle
+                circle.addEventListener('click', () => { // Ajoute un écouteur d'événement pour le clic sur le cercle
+                    Array.from(scaleDiv.getElementsByClassName('circle')).forEach(c => c.classList.remove('selected')); // Supprime la classe "selected" des autres cercles
+                    circle.classList.add('selected'); // Ajoute la classe "selected" au cercle cliqué
+                    answers[questionCounter] = i; // Enregistre la réponse sélectionnée
                 });
-                scaleDiv.appendChild(circle);
+                scaleDiv.appendChild(circle); // Ajoute le cercle à la div de l'échelle
             }
 
-            const neutralLabel = document.createElement('span');
-            neutralLabel.textContent = "Neutre";
-            neutralLabel.classList.add('neutral-label');
-            scaleDiv.appendChild(neutralLabel);
+            const neutralLabel = document.createElement('span'); // Crée un élément span pour le label neutre
+            neutralLabel.textContent = "Neutre"; // Définit le texte du label neutre
+            neutralLabel.classList.add('neutral'); // Ajoute la classe "neutral"
+            scaleDiv.appendChild(neutralLabel); // Ajoute le label neutre à la div de l'échelle
 
-            const positiveLabel = document.createElement('span');
-            positiveLabel.textContent = "Pense";
-            positiveLabel.classList.add('positive-label');
-            scaleDiv.appendChild(positiveLabel);
+            const positiveLabel = document.createElement('span'); // Crée un élément span pour le label positif
+            positiveLabel.textContent = "POSITIF"; // Définit le texte du label positif
+            positiveLabel.classList.add('positive'); // Ajoute la classe "positive"
+            scaleDiv.appendChild(positiveLabel); // Ajoute le label positif à la div de l'échelle
 
-            questionDiv.appendChild(scaleDiv);
+            questionDiv.appendChild(scaleDiv); // Ajoute l'échelle à la div question
 
-            const nextButton = document.createElement('button');
-            nextButton.textContent = "Suivant";
-            nextButton.classList.add('next');
-            nextButton.addEventListener('click', () => {
-                if (answers[questionCounter] === null) {
-                    alert("Veuillez sélectionner une valeur avant de continuer.");
+            const nextButton = document.createElement('button'); // Crée un élément bouton pour passer à la question suivante
+            nextButton.textContent = "Suivant"; // Définit le texte du bouton
+            nextButton.classList.add('next'); // Ajoute la classe "next" au bouton
+            nextButton.addEventListener('click', () => { // Ajoute un écouteur d'événement pour le clic sur le bouton
+                if (answers[questionCounter] === null) { // Vérifie si une réponse a été sélectionnée
+                    alert("Veuillez sélectionner une valeur avant de continuer."); // Alerte si aucune réponse n'est sélectionnée
                 } else {
-                    // Move to the next question
-                    questionDiv.classList.remove('active');
-                    if (questionCounter + 1 < totalQuestions) {
-                        questionCounter++;
-                        updateProgress();
-                        const nextQuestionDiv = questionnaireContainer.querySelectorAll('.question')[questionCounter];
-                        nextQuestionDiv.classList.add('active');
+                    questionDiv.classList.remove('active'); // Masque la question actuelle
+                    if (questionCounter + 1 < totalQuestions) { // Vérifie s'il y a encore des questions
+                        questionCounter++; // Passe à la question suivante
+                        updateProgress(); // Met à jour la progression
+                        const nextQuestionDiv = questionnaireContainer.querySelectorAll('.question')[questionCounter]; // Sélectionne la prochaine question
+                        nextQuestionDiv.classList.add('active'); // Affiche la prochaine question
                     } else {
-                        // All questions answered, show submit button
-                        document.getElementById('submit').style.display = 'block';
+                        document.getElementById('submit').style.display = 'block'; // Affiche le bouton de soumission si toutes les questions sont répondues
                     }
                 }
             });
 
-            questionDiv.appendChild(nextButton);
-            questionnaireContainer.appendChild(questionDiv);
+            questionDiv.appendChild(nextButton); // Ajoute le bouton à la div question
+            questionnaireContainer.appendChild(questionDiv); // Ajoute la question au conteneur du questionnaire
         });
     });
 
-    // Start Questionnaire button click
-    document.getElementById('start-questionnaire').addEventListener('click', () => {
-        // Ensure initial questions are valid
-        const prenom = document.getElementById('prenom').value;
-        const age = document.getElementById('age').value;
-        const sexe = document.getElementById('sexe').value;
-        const situationProfessionnelle = document.getElementById('situation-professionnelle').value;
-        const situationFamiliale = document.getElementById('situation-familiale').value;
-        const dureeRelation = document.getElementById('duree-relation').value;
-        const cohabitation = document.getElementById('cohabitation').value;
-        const cohabitationDetails = document.getElementById('cohabitation-details').value;
-        const stress = document.getElementById('stress').value;
-        const satisfaction = document.getElementById('satisfaction').value;
-        const tensions = document.getElementById('tensions').value;
-        const relationFamille = document.getElementById('relation-famille').value;
+    document.getElementById('start-questionnaire').addEventListener('click', () => { // Écouteur d'événement pour commencer le questionnaire
+        const prenom = document.getElementById('prenom').value; // Récupère la valeur du prénom
+        const age = document.getElementById('age').value; // Récupère l'âge
+        const sexe = document.getElementById('sexe').value; // Récupère le sexe
+        const situationProfessionnelle = document.getElementById('situation-professionnelle').value; // Récupère la situation professionnelle
+        const situationFamiliale = document.getElementById('situation-familiale').value; // Récupère la situation familiale
+        const dureeRelation = document.getElementById('duree-relation').value; // Récupère la durée de la relation
+        const cohabitation = document.getElementById('cohabitation').value; // Récupère la cohabitation
+        const cohabitationDetails = document.getElementById('cohabitation-details').value; // Récupère les détails de la cohabitation
+        const stress = document.getElementById('stress').value; // Récupère le niveau de stress
+        const satisfaction = document.getElementById('satisfaction').value; // Récupère le niveau de satisfaction
+        const tensions = document.getElementById('tensions').value; // Récupère les tensions
+        const relationFamille = document.getElementById('relation-famille').value; // Récupère la relation avec la famille
 
         if (!prenom || !age || !sexe || !situationProfessionnelle || !situationFamiliale || !dureeRelation || !cohabitation || !cohabitationDetails || !stress || !satisfaction || !tensions || !relationFamille) {
-            alert("Veuillez remplir toutes les informations personnelles avant de commencer.");
+            alert("Veuillez remplir toutes les informations personnelles avant de commencer."); // Vérifie que toutes les informations personnelles sont complètes
             return;
         }
 
-        document.querySelector('.initial-questions').style.display = 'none';
-        instruction.style.display = 'block';
-        document.getElementById('questionnaire-container').style.display = 'block';
+        document.querySelector('.initial-questions').style.display = 'none'; // Masque les questions initiales
+        instruction.style.display = 'block'; // Affiche les instructions
+        document.getElementById('questionnaire-container').style.display = 'block'; // Affiche le conteneur du questionnaire
 
-        // Show the first question
-        const firstQuestionDiv = questionnaireContainer.querySelectorAll('.question')[0];
-        firstQuestionDiv.classList.add('active');
+        const firstQuestionDiv = questionnaireContainer.querySelectorAll('.question')[0]; // Sélectionne la première question
+        firstQuestionDiv.classList.add('active'); // Affiche la première question
 
-        console.log('Début du questionnaire - première question affichée');
+        console.log('Début du questionnaire - première question affichée'); // Message de débogage
     });
 
-    // Gestion du changement de la sélection de cohabitation pour afficher le champ de texte
-    document.getElementById('cohabitation').addEventListener('change', function () {
-        const detailsInput = document.getElementById('cohabitation-details');
-        detailsInput.style.display = 'block';
+    document.getElementById('cohabitation').addEventListener('change', function () { // Écouteur d'événement pour la sélection de cohabitation
+        const detailsInput = document.getElementById('cohabitation-details'); // Récupère l'input des détails de cohabitation
+        detailsInput.style.display = 'block'; // Affiche le champ de texte pour les détails
     });
 
-    // Submit button event
-    document.getElementById('submit').addEventListener('click', () => {
-        // Calculer les moyennes des réponses
-        const oddAnswers = answers.filter((_, index) => index % 2 === 0); // questions impaires
-        const evenAnswers = answers.filter((_, index) => index % 2 !== 0); // questions paires
+    document.getElementById('submit').addEventListener('click', () => { // Écouteur d'événement pour soumettre le questionnaire
+        const oddAnswers = answers.filter((_, index) => index % 2 === 0); // Filtre les réponses aux questions impaires
+        const evenAnswers = answers.filter((_, index) => index % 2 !== 0); // Filtre les réponses aux questions paires
 
-        const oddAverage = oddAnswers.reduce((sum, val) => sum + val, 0) / oddAnswers.length;
-        const evenAverage = evenAnswers.reduce((sum, val) => sum + val, 0) / evenAnswers.length;
+        const oddAverage = oddAnswers.reduce((sum, val) => sum + val, 0) / oddAnswers.length; // Calcule la moyenne des réponses impaires
+        const evenAverage = evenAnswers.reduce((sum, val) => sum + val, 0) / evenAnswers.length; // Calcule la moyenne des réponses paires
 
-        // Calculer la note sur 20
-        const averageScore = answers.reduce((sum, val) => sum + val, 0) / answers.length;
-        const noteSur20 = ((averageScore + 10) / 20) * 20; // Convertir -10 à 10 en 0 à 20
+        const averageScore = answers.reduce((sum, val) => sum + val, 0) / answers.length; // Calcule la moyenne générale
+        const noteSur20 = ((averageScore + 10) / 20) * 20; // Convertit la moyenne en une note sur 20
 
         const resultText = `
             Informations Personnelles :
@@ -270,19 +257,16 @@ document.addEventListener('DOMContentLoaded', () => {
             Réponses complètes : ${answers.join(' - ')}
         `;
 
-        // Téléchargement du fichier .txt
-        const blob = new Blob([resultText], { type: 'text/plain;charset=utf-8' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'resultats_questionnaire.txt';
-        link.click();
+        const blob = new Blob([resultText], { type: 'text/plain;charset=utf-8' }); // Crée un fichier texte avec les résultats
+        const link = document.createElement('a'); // Crée un lien pour le téléchargement
+        link.href = URL.createObjectURL(blob); // Définit l'URL du fichier texte
+        link.download = 'resultats_questionnaire.txt'; // Définit le nom du fichier texte
+        link.click(); // Clique sur le lien pour déclencher le téléchargement
 
-        alert('Questionnaire terminé! Vos réponses ont été enregistrées.');
+        alert('Questionnaire terminé! Vos réponses ont été enregistrées.'); // Alerte à la fin du questionnaire
     });
 
-    // Fonction pour mettre à jour la progression
-    function updateProgress() {
-        console.log(`Progression: Question ${questionCounter + 1} sur ${totalQuestions}`);
+    function updateProgress() { // Fonction pour mettre à jour la progression du questionnaire
+        console.log(`Progression: Question ${questionCounter + 1} sur ${totalQuestions}`); // Affiche la progression dans la console
     }
 });
-
