@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,6 @@
 <body>
     <div class="container">
         <h1>Évaluation des Compétences Relationnelles</h1>
-        <p>Pour chaque question, sélectionnez le cercle qui représente le mieux votre niveau de perception.</p>
 
         <!-- Initial Questions -->
         <div class="initial-questions active">
@@ -72,7 +72,8 @@
         </div>
 
         <!-- Questionnaire -->
-        <div id="questionnaire-container"></div>
+        <p id="instruction" style="display: none;">Pour chaque question, sélectionnez le cercle qui représente le mieux votre niveau de perception.</p>
+        <div id="questionnaire-container" style="display: none;"></div>
 
         <!-- Submit Button -->
         <button id="submit" style="display:none;">Soumettre</button>
