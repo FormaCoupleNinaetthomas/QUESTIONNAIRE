@@ -1,3 +1,4 @@
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-image: url('image-background.jpg'); /* Assurez-vous que le chemin de l'image est correct */
@@ -84,27 +85,12 @@ h2 {
     margin-bottom: 10px;
 }
 
-h3 {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
 .scale {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
     position: relative;
-    margin-top: 10px;
-}
-
-.scale-label {
-    font-size: 0.9em;
-    color: #555;
-    margin: 0 10px;
-    width: 60px;
-    text-align: center;
 }
 
 .circle {
@@ -114,63 +100,65 @@ h3 {
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.2s;
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
-    font-size: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
 }
 
-.circle:hover {
-    background-color: #bbb;
+.circle.selected {
+    background-color: #4caf50;
+    color: #fff;
 }
 
-.circle[data-value="0"] {
-    background-color: #999;
-}
-
-.circle[data-value="-10"], .circle[data-value="10"] {
+.circle[data-value="-10"],
+.circle[data-value="10"] {
     transform: scale(1.8);
 }
 
-.circle[data-value="-9"], .circle[data-value="9"] {
+.circle[data-value="-9"],
+.circle[data-value="9"] {
     transform: scale(1.7);
 }
 
-.circle[data-value="-8"], .circle[data-value="8"] {
+.circle[data-value="-8"],
+.circle[data-value="8"] {
     transform: scale(1.6);
 }
 
-.circle[data-value="-7"], .circle[data-value="7"] {
+.circle[data-value="-7"],
+.circle[data-value="7"] {
     transform: scale(1.5);
 }
 
-.circle[data-value="-6"], .circle[data-value="6"] {
+.circle[data-value="-6"],
+.circle[data-value="6"] {
     transform: scale(1.4);
 }
 
-.circle[data-value="-5"], .circle[data-value="5"] {
+.circle[data-value="-5"],
+.circle[data-value="5"] {
     transform: scale(1.3);
 }
 
-.circle[data-value="-4"], .circle[data-value="4"] {
+.circle[data-value="-4"],
+.circle[data-value="4"] {
     transform: scale(1.2);
 }
 
-.circle[data-value="-3"], .circle[data-value="3"] {
+.circle[data-value="-3"],
+.circle[data-value="3"] {
     transform: scale(1.1);
 }
 
-.circle[data-value="-2"], .circle[data-value="2"] {
+.circle[data-value="-2"],
+.circle[data-value="2"] {
     transform: scale(1.05);
 }
 
-.circle[data-value="-1"], .circle[data-value="1"] {
+.circle[data-value="-1"],
+.circle[data-value="1"] {
     transform: scale(1);
-}
-
-.scale .circle.selected {
-    background-color: #4caf50;
-    color: #fff;
 }
 
 button {
@@ -191,5 +179,5 @@ button:hover {
 }
 
 #submit {
-    display: none; /* Masquer le bouton de soumission au départ */
+    display: none; /* Masquer le bouton de soumission initialement */
 }
