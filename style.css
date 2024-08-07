@@ -12,7 +12,7 @@ body {
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     min-height: 100vh; /* Hauteur minimale pour remplir l'écran */
-    margin: 0; /* Pas de marge autour de la page */
+    margin: 50; /* Pas de marge autour de la page */
 }
 
 /* Conteneur principal */
