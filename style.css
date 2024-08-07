@@ -16,7 +16,7 @@ body {
 
 /* Conteneur principal pour le formulaire */
 .container {
-    max-width: 800px; /* Largeur maximale du conteneur */
+    max-width: 900px; /* Largeur maximale du conteneur */
     width: 100%; /* Utilise toute la largeur disponible */
     background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec transparence */
     border-radius: 8px; /* Arrondit les coins du conteneur */
