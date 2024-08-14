@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scaleDiv.classList.add('scale');
 
             const negativeLabel = document.createElement('span');
-            negativeLabel.textContent = "Je ne pense pas";
+            negativeLabel.textContent = "Je ne le pense pas";
             negativeLabel.classList.add('negative-label');
             scaleDiv.appendChild(negativeLabel);
 
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const positiveLabel = document.createElement('span');
-            positiveLabel.textContent = "        Je pense";
+            positiveLabel.textContent = "Je pense sincèrement";
             positiveLabel.classList.add('positive-label');
             scaleDiv.appendChild(positiveLabel);
 
