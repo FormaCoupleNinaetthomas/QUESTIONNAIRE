@@ -128,64 +128,39 @@ button:hover {
 }
 
 /* Taille des cercles */
-.circle[data-value="-10"],
-.circle[data-value="10"] {
+.circle[data-value="-5"],
+.circle[data-value="5"] {
     width: 55px;
     height: 80px;
 }
 
-.circle[data-value="-9"],
-.circle[data-value="9"] {
+.circle[data-value="-4"],
+.circle[data-value="4"] {
     width: 48px;
     height: 68px;
 }
 
-.circle[data-value="-8"],
-.circle[data-value="8"] {
+.circle[data-value="-3"],
+.circle[data-value="3"] {
     width: 40px;
     height: 60px;
 }
 
-.circle[data-value="-7"],
-.circle[data-value="7"] {
+.circle[data-value="-2"],
+.circle[data-value="2"] {
     width: 32px;
     height: 52px;
 }
 
-.circle[data-value="-6"],
-.circle[data-value="6"] {
+.circle[data-value="-1"],
+.circle[data-value="1"] {
     width: 28px;
     height: 48px;
 }
 
-.circle[data-value="-5"],
-.circle[data-value="5"] {
+.circle[data-value="0"] {
     width: 24px;
     height: 44px;
-}
-
-.circle[data-value="-4"],
-.circle[data-value="4"] {
-    width: 21px;
-    height: 41px;
-}
-
-.circle[data-value="-3"],
-.circle[data-value="3"] {
-    width: 18px;
-    height: 39px;
-}
-
-.circle[data-value="-2"],
-.circle[data-value="2"] {
-    width: 17px;
-    height: 34px;
-}
-
-.circle[data-value="-1"],
-.circle[data-value="1"] {
-    width: 17px;
-    height: 31px;
 }
 
 .circle[data-value="0"] {
