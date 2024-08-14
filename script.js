@@ -141,7 +141,7 @@ const questionsData = [
             scaleDiv.classList.add('scale');
 
             const negativeLabel = document.createElement('span');
-            negativeLabel.textContent = "Je ne le pense pas";
+            negativeLabel.textContent = "NE PENSE PAS >";
             negativeLabel.classList.add('negative-label');
             scaleDiv.appendChild(negativeLabel);
 
@@ -160,7 +160,7 @@ const questionsData = [
             }
 
             const positiveLabel = document.createElement('span');
-            positiveLabel.textContent = "Je pense sincèrement";
+            positiveLabel.textContent = "<  JE LE PENSE";
             positiveLabel.classList.add('positive-label');
             scaleDiv.appendChild(positiveLabel);
 
