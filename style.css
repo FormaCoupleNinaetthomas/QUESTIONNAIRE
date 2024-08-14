@@ -189,7 +189,7 @@ button:hover {
 /* Labels négatif et positif */
 .negative-label {
     left: 10%; /* Position sous le cercle le plus à gauche */
-    color: #bf9999; /* Couleur rouge pour le label négatif */
+    color: #773434; /* Couleur rouge pour le label négatif */
     font-size: 1em; /* Taille de police pour les labels */
       font-weight: bold; /* Mettre le texte en gras pour la question */
 
@@ -198,7 +198,7 @@ button:hover {
 
 .positive-label {
     right: 10%; /* Position sous le cercle le plus à droite */
-    color: #9ebf99; /* Couleur verte pour le label positif */
+    color: #3F7734; /* Couleur verte pour le label positif */
       font-size: 1em; /* Taille de police pour les labels */
       font-weight: bold; /* Mettre le texte en gras pour la question */
 
