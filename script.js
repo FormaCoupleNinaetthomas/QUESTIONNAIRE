@@ -1,126 +1,126 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const questionsData = [
-        {
-            category: "A. Communication",
-            questions: [
-                "Je me sens à l'aise pour exprimer mes pensées et mes émotions à mon/ma partenaire.",
-                "Je pense que mon/ma partenaire est à l'aise pour exprimer ses pensées et ses émotions.",
-                "Mon/ma partenaire écoute attentivement ce que je dis.",
-                "Je pense que j'écoute attentivement ce que mon/ma partenaire dit.",
-                "Nous discutons ouvertement des problèmes avant qu'ils ne deviennent graves.",
-                "Mon/ma partenaire pense que nous discutons ouvertement des problèmes avant qu'ils ne deviennent graves.",
-                "Je me sens compris(e) par mon/ma partenaire.",
-                "Mon/ma partenaire se sent compris(e) par moi."
-            ]
-        },
-        {
-            category: "B. Confiance et Engagement",
-            questions: [
-                "J'ai confiance en mon/ma partenaire.",
-                "Mon/ma partenaire a confiance en moi.",
-                "Je ressens de la jalousie dans notre relation.",
-                "Mon/ma partenaire ressent de la jalousie dans notre relation.",
-                "Nous sommes tous deux engagés à faire fonctionner notre relation.",
-                "Mon/ma partenaire est engagé à faire fonctionner notre relation.",
-                "Je me sens en sécurité dans notre relation.",
-                "Mon/ma partenaire se sent en sécurité dans notre relation."
-            ]
-        },
-        {
-            category: "C. Intimité et Affection",
-            questions: [
-                "Je me sens connecté(e) émotionnellement à mon/ma partenaire.",
-                "Mon/ma partenaire se sent connecté(e) émotionnellement à moi.",
-                "Nous passons suffisamment de temps de qualité ensemble.",
-                "Mon/ma partenaire pense que nous passons suffisamment de temps de qualité ensemble.",
-                "Notre relation intime est satisfaisante.",
-                "Mon/ma partenaire pense que notre relation intime est satisfaisante.",
-                "Nous exprimons régulièrement notre affection l'un envers l'autre.",
-                "Mon/ma partenaire pense que nous exprimons régulièrement notre affection l'un envers l'autre."
-            ]
-        },
-        {
-            category: "D. Conflits et Résolution",
-            questions: [
-                "Nous résolvons nos désaccords de manière constructive.",
-                "Mon/ma partenaire pense que nous résolvons nos désaccords de manière constructive.",
-                "Les conflits entre nous sont fréquents.",
-                "Mon/ma partenaire pense que les conflits entre nous sont fréquents.",
-                "Je ressens de la rancune à propos de conflits passés non résolus.",
-                "Mon/ma partenaire pense que je ressens de la rancune à propos de conflits passés non résolus.",
-                "Nous arrivons à trouver des compromis satisfaisants pour les deux parties.",
-                "Mon/ma partenaire pense que nous arrivons à trouver des compromis satisfaisants pour les deux parties."
-            ]
-        },
-        {
-            category: "E. Valeurs et Objectifs Communs",
-            questions: [
-                "Nous partageons les mêmes valeurs fondamentales.",
-                "Mon/ma partenaire pense que nous partageons les mêmes valeurs fondamentales.",
-                "Nos objectifs de vie sont alignés.",
-                "Mon/ma partenaire pense que nos objectifs de vie sont alignés.",
-                "Nous avons des projets communs pour l'avenir.",
-                "Mon/ma partenaire pense que nous avons des projets communs pour l'avenir.",
-                "Nous accordons une importance similaire à nos carrières respectives.",
-                "Mon/ma partenaire pense que nous accordons une importance similaire à nos carrières respectives."
-            ]
-        },
-        {
-            category: "F. Partenariat et Responsabilités",
-            questions: [
-                "Les tâches domestiques sont réparties équitablement entre nous.",
-                "Mon/ma partenaire pense que les tâches domestiques sont réparties équitablement entre nous.",
-                "Je reçois le soutien émotionnel dont j'ai besoin de mon/ma partenaire.",
-                "Mon/ma partenaire reçoit le soutien émotionnel dont il/elle a besoin de ma part.",
-                "Nous formons une équipe efficace pour gérer les responsabilités familiales.",
-                "Mon/ma partenaire pense que nous formons une équipe efficace pour gérer les responsabilités familiales.",
-                "Je me sens valorisé(e) et apprécié(e) dans notre relation.",
-                "Mon/ma partenaire se sent valorisé(e) et apprécié(e) dans notre relation."
-            ]
-        },
-        {
-            category: "G. Finance",
-            questions: [
-                "Nous gérons bien nos finances ensemble.",
-                "Mon/ma partenaire pense que nous gérons bien nos finances ensemble.",
-                "Nous discutons ouvertement de nos préoccupations financières.",
-                "Mon/ma partenaire pense que nous discutons ouvertement de nos préoccupations financières.",
-                "Nos habitudes de dépense sont compatibles.",
-                "Mon/ma partenaire pense que nos habitudes de dépense sont compatibles.",
-                "Les finances causent des tensions dans notre relation.",
-                "Mon/ma partenaire pense que les finances causent des tensions dans notre relation."
-            ]
-        },
-        {
-            category: "H. Influences Extérieures",
-            questions: [
-                "Le stress lié au travail impacte négativement notre relation.",
-                "Mon/ma partenaire pense que le stress lié au travail impacte négativement notre relation.",
-                "Les opinions de nos familles respectives influencent notre relation.",
-                "Mon/ma partenaire pense que les opinions de nos familles respectives influencent notre relation.",
-                "Nous gérons bien les pressions extérieures ensemble.",
-                "Mon/ma partenaire pense que nous gérons bien les pressions extérieures ensemble.",
-                "Notre environnement social (amis, communauté) soutient notre relation.",
-                "Mon/ma partenaire pense que notre environnement social (amis, communauté) soutient notre relation."
-            ]
-        },
-        {
-            category: "I. Habitudes et Styles de Vie",
-            questions: [
-                "Nos habitudes de vie (sommeil, loisirs) sont compatibles.",
-                "Mon/ma partenaire pense que nos habitudes de vie (sommeil, loisirs) sont compatibles.",
-                "Nous avons des hobbies ou des intérêts communs.",
-                "Mon/ma partenaire pense que nous avons des hobbies ou des intérêts communs.",
-                "Nous apprécions le même type d'activités sociales.",
-                "Mon/ma partenaire pense que nous apprécions le même type d'activités sociales.",
-                "Nos routines quotidiennes s'harmonisent bien.",
-                "Mon/ma partenaire pense que nos routines quotidiennes s'harmonisent bien."
-            ]
-        }
-    ];
-
+const questionsData = [
+    {
+        category: "A. Communication",
+        questions: [
+            "Je m'exprime librement sur mes pensées et émotions avec mon/ma partenaire.",
+            "Mon/ma partenaire semble à l'aise pour partager ses pensées et ses émotions.",
+            "Mon/ma partenaire prête une oreille attentive à mes propos.",
+            "J'écoute avec attention ce que mon/ma partenaire souhaite exprimer.",
+            "Nous abordons les problèmes sans détour avant qu'ils ne s'aggravent.",
+            "Mon/ma partenaire estime que nous discutons ouvertement des défis avant qu'ils ne deviennent sérieux.",
+            "Je me sens véritablement entendu(e) par mon/ma partenaire.",
+            "Mon/ma partenaire se sent écouté(e) et compris(e) par moi."
+        ]
+    },
+    {
+        category: "B. Confiance et Engagement",
+        questions: [
+            "La confiance mutuelle est une pierre angulaire de notre relation.",
+            "Mon/ma partenaire me fait entièrement confiance.",
+            "Il m'arrive de ressentir de la jalousie dans notre couple.",
+            "Mon/ma partenaire éprouve parfois de la jalousie à mon égard.",
+            "Nous partageons un engagement fort pour faire prospérer notre relation.",
+            "Mon/ma partenaire est résolument engagé(e) à faire fonctionner notre couple.",
+            "Je me sens en paix et en sécurité dans notre relation.",
+            "Mon/ma partenaire ressent un sentiment de sécurité dans notre relation."
+        ]
+    },
+    {
+        category: "C. Intimité et Affection",
+        questions: [
+            "Je ressens une connexion émotionnelle profonde avec mon/ma partenaire.",
+            "Mon/ma partenaire se sent proche de moi, émotionnellement.",
+            "Nous savons consacrer du temps de qualité à notre relation.",
+            "Mon/ma partenaire apprécie le temps que nous passons ensemble.",
+            "Notre intimité est une source de satisfaction pour moi.",
+            "Mon/ma partenaire trouve que notre vie intime est épanouissante.",
+            "Nous exprimons fréquemment notre affection l'un envers l'autre.",
+            "Mon/ma partenaire perçoit notre relation comme affectueuse et tendre."
+        ]
+    },
+    {
+        category: "D. Conflits et Résolution",
+        questions: [
+            "Nos désaccords sont gérés de manière constructive.",
+            "Mon/ma partenaire pense que nous résolvons nos conflits de façon positive.",
+            "Les conflits surgissent souvent dans notre relation.",
+            "Mon/ma partenaire trouve que nos disputes sont fréquentes.",
+            "Je garde parfois rancune à propos de conflits non résolus.",
+            "Mon/ma partenaire ressent que je conserve des ressentiments sur des conflits passés.",
+            "Nous parvenons à des compromis qui satisfont les deux parties.",
+            "Mon/ma partenaire estime que nous trouvons des compromis équitables."
+        ]
+    },
+    {
+        category: "E. Valeurs et Objectifs Communs",
+        questions: [
+            "Nous partageons les mêmes valeurs fondamentales dans notre couple.",
+            "Mon/ma partenaire et moi sommes alignés sur nos valeurs essentielles.",
+            "Nos objectifs de vie convergent naturellement.",
+            "Mon/ma partenaire et moi avons des objectifs de vie similaires.",
+            "Nous avons une vision commune pour notre avenir.",
+            "Mon/ma partenaire voit l'avenir de la même manière que moi.",
+            "Nous accordons une importance comparable à nos carrières respectives.",
+            "Mon/ma partenaire et moi avons des priorités professionnelles alignées."
+        ]
+    },
+    {
+        category: "F. Partenariat et Responsabilités",
+        questions: [
+            "Les tâches domestiques sont réparties de manière équitable entre nous.",
+            "Mon/ma partenaire et moi partageons les responsabilités de la maison équitablement.",
+            "Je reçois le soutien émotionnel dont j'ai besoin de mon/ma partenaire.",
+            "Mon/ma partenaire trouve qu'il/elle reçoit le soutien émotionnel nécessaire de ma part.",
+            "Nous formons une équipe efficace pour gérer nos responsabilités familiales.",
+            "Mon/ma partenaire et moi travaillons en tandem pour gérer la famille.",
+            "Je me sens valorisé(e) et apprécié(e) dans notre relation.",
+            "Mon/ma partenaire se sent valorisé(e) et reconnu(e) dans notre couple."
+        ]
+    },
+    {
+        category: "G. Finance",
+        questions: [
+            "Nous gérons nos finances de manière harmonieuse.",
+            "Mon/ma partenaire trouve que nous gérons bien nos finances ensemble.",
+            "Nous discutons ouvertement de nos préoccupations financières.",
+            "Mon/ma partenaire estime que nous abordons les sujets financiers avec transparence.",
+            "Nos habitudes de dépense s'harmonisent bien.",
+            "Mon/ma partenaire pense que nos styles de dépense sont compatibles.",
+            "Les questions financières créent des tensions dans notre relation.",
+            "Mon/ma partenaire pense que les finances sont une source de tension entre nous."
+        ]
+    },
+    {
+        category: "H. Influences Extérieures",
+        questions: [
+            "Le stress professionnel a un impact négatif sur notre relation.",
+            "Mon/ma partenaire trouve que le travail affecte notre relation.",
+            "Les opinions de nos familles influencent notre couple.",
+            "Mon/ma partenaire pense que les avis familiaux jouent un rôle dans notre relation.",
+            "Nous gérons bien les pressions extérieures ensemble.",
+            "Mon/ma partenaire estime que nous faisons face aux pressions extérieures de manière solidaire.",
+            "Notre entourage social soutient notre relation.",
+            "Mon/ma partenaire pense que notre cercle social renforce notre couple."
+        ]
+    },
+    {
+        category: "I. Habitudes et Styles de Vie",
+        questions: [
+            "Nos modes de vie sont compatibles (sommeil, loisirs).",
+            "Mon/ma partenaire trouve que nos habitudes de vie s'accordent bien.",
+            "Nous partageons des hobbies ou des intérêts communs.",
+            "Mon/ma partenaire et moi avons des passions communes.",
+            "Nous apprécions les mêmes types d'activités sociales.",
+            "Mon/ma partenaire et moi aimons les mêmes sorties sociales.",
+            "Nos routines quotidiennes s'harmonisent bien.",
+            "Mon/ma partenaire trouve que nos routines s'accordent bien."
+        ]
+    }
+];
+    
     const questionnaireContainer = document.getElementById('questionnaire-container');
     const instruction = document.getElementById('instruction');
     let questionCounter = 0; // Démarrer à la première question
