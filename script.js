@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             negativeLabel.classList.add('negative-label');
             scaleDiv.appendChild(negativeLabel);
 
-            for (let i = -10; i <= 10; i++) {
+            for (let i = -5; i <= 5; i++) {
                 const circle = document.createElement('div');
                 circle.classList.add('circle');
                 circle.dataset.value = i;
