@@ -20,8 +20,8 @@ const questionsData = [
         questions: [
             "La confiance mutuelle est une pierre angulaire de notre relation.",
             "Mon/ma partenaire me fait entièrement confiance.",
-            "Il m'arrive de ressentir de la jalousie dans notre couple.",
-            "Mon/ma partenaire éprouve parfois de la jalousie à mon égard.",
+            "Je ne ressent pas de jalousie dans mon couple.",
+            "Mon/ma partenaire n'éprouve pas de jalousie dans notre couple.",
             "Nous partageons un engagement fort pour faire prospérer notre relation.",
             "Mon/ma partenaire est résolument engagé(e) à faire fonctionner notre couple.",
             "Je me sens en paix et en sécurité dans notre relation.",
@@ -46,11 +46,11 @@ const questionsData = [
         questions: [
             "Nos désaccords sont gérés de manière constructive.",
             "Mon/ma partenaire pense que nous résolvons nos conflits de façon positive.",
-            "Les conflits surgissent souvent dans notre relation.",
-            "Mon/ma partenaire trouve que nos disputes sont fréquentes.",
-            "Je garde parfois rancune à propos de conflits non résolus.",
-            "Mon/ma partenaire ressent que je conserve des ressentiments sur des conflits passés.",
-            "Nous parvenons à des compromis qui satisfont les deux parties.",
+            "Nos conflits surgissent rarement dans notre relation.",
+            "Mon/ma partenaire trouve que nos disputes ne sont pas fréquentes.",
+            "Je ne garde pas rancune à propos de conflits non résolus.",
+            "Mon/ma partenaire ne garde pas rancune à propos de conflits non résolus.",
+            "Nous parvenons à trouver des compromis équitables en cas de dés-ententes.",
             "Mon/ma partenaire estime que nous trouvons des compromis équitables."
         ]
     },
@@ -89,17 +89,17 @@ const questionsData = [
             "Mon/ma partenaire estime que nous abordons les sujets financiers avec transparence.",
             "Nos habitudes de dépense s'harmonisent bien.",
             "Mon/ma partenaire pense que nos styles de dépense sont compatibles.",
-            "Les questions financières créent des tensions dans notre relation.",
-            "Mon/ma partenaire pense que les finances sont une source de tension entre nous."
+            "Les questions financières ne créent pas de tensions dans notre relation.",
+            "Mon/ma partenaire pense que les finances ne sont pas une source de tension entre nous."
         ]
     },
     {
         category: "H. Influences Extérieures",
         questions: [
-            "Le stress professionnel a un impact négatif sur notre relation.",
-            "Mon/ma partenaire trouve que le travail affecte notre relation.",
-            "Les opinions de nos familles influencent notre couple.",
-            "Mon/ma partenaire pense que les avis familiaux jouent un rôle dans notre relation.",
+            "Le stress professionnel n'a pas d'impact négatif sur notre relation.",
+            "Mon/ma partenaire trouve que le travail n'affecte pas notre relation.",
+            "Les opinions de nos familles n'influencent pas notre couple.",
+            "Mon/ma partenaire pense que les avis familiaux n'influencent pas notre couple.",
             "Nous gérons bien les pressions extérieures ensemble.",
             "Mon/ma partenaire estime que nous faisons face aux pressions extérieures de manière solidaire.",
             "Notre entourage social soutient notre relation.",
